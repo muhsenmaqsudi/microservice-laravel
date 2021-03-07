@@ -26,5 +26,6 @@ Route::post('/greeting', function (Request $request, NestJsService $nestService)
 
 Route::get('/observable', function (NestJsService $nestService) {
     $nestResponse = $nestService->send(['cmd' => 'observable']);
+    var_dump($nestResponse);
     return $nestResponse->sum();
 });
